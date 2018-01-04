@@ -152,7 +152,7 @@
 									<td class="tg-yw4l"><c:out
 											value="${items.getUrun_klasor()}"></c:out></td>
 									<td class="tg-yw4l"><c:out
-											value="${items.getUrun_editor()}"  escapeXml="false" ></c:out></td>
+											value="${items.getUrun_kisacik()}"></c:out></td>
 									<td class="tg-yw4l"><c:out
 											value="${items.getUrun_kategori()}"></c:out></td>
 									<td><a href='<s:url value="/urunsil/${items.getUrun_id()}"></s:url>'

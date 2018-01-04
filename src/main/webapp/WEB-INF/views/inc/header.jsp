@@ -8,7 +8,7 @@
 	<!-- Logo -->
 	<a href='<s:url value="/"></s:url>' class="logo"> <!-- mini logo for sidebar mini 50x50 pixels -->
 		<span class="logo-mini"><b>A</b>LT</span> <!-- logo for regular state and mobile devices -->
-		<span class="logo-lg"><b>JavaLoper</b> Ticaret</span>
+		<span class="logo-lg"><b>Wissen</b> Ticaret</span>
 	</a>
 
 	<!-- Header Navbar: style can be found in header.less -->

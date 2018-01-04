@@ -28,7 +28,7 @@
 
 		<i class="fa fa-dashboard"></i><a
 			href='<s:url value="/kategoriduzenle"></s:url>'><span><c:out
-					value="Kategori Ekle-Düzenle"></c:out></span></a>
+					value="Kategori Ekle-Sil-Düzenle"></c:out></span></a>
 
 
 
@@ -72,7 +72,7 @@
 
 							<li><a
 								href='<s:url value="/urunekleme/${ iteml.getKategadi()}"></s:url>'>
-									<i class="fa fa-circle-o"></i>Ürün Ekle-Sil
+									<i class="fa fa-circle-o"></i>Ürün Ekle-Sil-Düzenle
 							</a></li>
 							<li class="active"><a
 								href='<s:url value="/urunbilgileri/${ iteml.getKategadi()}"></s:url>'><i

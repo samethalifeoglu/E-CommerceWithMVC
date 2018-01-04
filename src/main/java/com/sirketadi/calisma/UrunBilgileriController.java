@@ -104,6 +104,7 @@ public class UrunBilgileriController {
 				ubp.setUrun_editor(rs.getString("urun_editor"));
 				ubp.setUrun_kategori(rs.getString("urun_kategori"));
 				ubp.setUrun_adi(rs.getString("urun_adi"));
+				ubp.setUrun_kisacik(rs.getString("urun_kisacik"));
 				urprop.add(ubp);
 
 			}

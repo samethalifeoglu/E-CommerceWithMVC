@@ -52,6 +52,8 @@ public class UrundetayController {
 			}
 			
 			model.addAttribute("resimm", resim);
+			model.addAttribute("gününfirsati", resim);
+			
 			
 			
 		} catch (Exception e) {

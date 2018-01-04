@@ -50,7 +50,7 @@
 									</div>
 									<div class="col-md-9">
 										<input autocomplete="off" type="text" name="urunadi"
-											class="form-control" placeholder="Kategori Adı Giriniz">
+											class="form-control" placeholder="Ürün Adı Giriniz">
 									</div>
 								</div>
 							</div>
