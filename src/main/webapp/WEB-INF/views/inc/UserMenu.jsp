@@ -10,8 +10,7 @@
 		<!-- Sidebar user panel -->
 		<div class="user-panel">
 			<div class="pull-left image">
-				<img src='<s:url value="/resources/userimage/ee.jpg"></s:url>' class="img-circle"
-					alt="User Image">
+				
 			</div>
 
 			<div class="pull-left info">
