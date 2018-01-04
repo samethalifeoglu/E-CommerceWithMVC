@@ -4,3 +4,8 @@ Bu proje yazılım dilleri olarak Java/JSP/JSF MVC ve Veritabanı olarak MYSQL t
 
 <a href="https://github.com/SametHalifeoglu/Mvceticaret/blob/master/resimler/admingiris.PNG" target="_blank">
 <img src="https://github.com/SametHalifeoglu/Mvceticaret/blob/master/resimler/admingiris.PNG" width="200" style="max-width:100%;"></a>
+
+<a href="https://github.com/SametHalifeoglu/Mvceticaret/blob/master/resimler/kategoriler.PNG" target="_blank">
+<img src="https://github.com/SametHalifeoglu/Mvceticaret/blob/master/resimler/kategoriler.PNG" width="200" style="max-width:100%;"></a>
+
+
