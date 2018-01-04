@@ -20,7 +20,7 @@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 	<div class="wrapper">
-		<jsp:include page="${request.contextPath}/header"></jsp:include>
+		<jsp:include page="${request.contextPath}/HeaderAdmin"></jsp:include>
 		<jsp:include page="${request.contextPath}/menu"></jsp:include>
 		<div class="content-wrapper">
 

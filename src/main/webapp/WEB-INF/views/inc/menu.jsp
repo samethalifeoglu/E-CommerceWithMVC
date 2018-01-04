@@ -15,9 +15,9 @@
 			</div>
 
 			<div class="pull-left info">
-				<c:if test="${not empty adminbilgisi}">
+				<c:if test="${not empty adminadsoyad}">
 					<p>
-						<c:out value="${adminbilgisi}"></c:out>
+						<c:out value="${adminadsoyad}"></c:out>
 					</p>
 				</c:if>
 			</div>

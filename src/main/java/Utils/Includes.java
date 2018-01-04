@@ -28,22 +28,37 @@ public class Includes {
 
 	// header dosyalarýnýn olduðu bölüm
 	@RequestMapping(value = "header", method = RequestMethod.GET)
-	public String headerCagir() {
+	public String headerCagir(Model model) {
+
 		return "inc/header";
 	}
 
 	DB db = new DB();
 
-
 	// menu dosyalarýnýn olduðu bölüm
 	@RequestMapping(value = "menu", method = RequestMethod.GET)
 	public String menuCagir(Model model) {
-		
-		
+
 		ArrayList<KategoriProperty> ls = new ArrayList<KategoriProperty>();
 		ArrayList<String> kategori = new ArrayList<String>();
-		ArrayList<Object> modelYolla = new ArrayList<Object>();
-		
+
+		String adminbilgi = null;
+		try {
+			String query = "select *from admin_panel";
+			ResultSet rs = db.baglan().executeQuery(query);
+			while (rs.next()) {
+
+				adminbilgi = rs.getString("admin_bilgi");
+			}
+
+			model.addAttribute("adminadsoyad", adminbilgi);
+
+		} catch (Exception e) {
+			System.err.println("Admin bilgilerini getirme hatasý: " + e.getMessage());
+		}
+
+		// ---------------------------------------------------------------------------------------------------------
+
 		try {
 			String que = "select *from kategori";
 			ResultSet rs = db.baglan().executeQuery(que);
@@ -60,31 +75,27 @@ public class Includes {
 		}
 
 		ArrayList<UrunProperty> urunProp = new ArrayList<UrunProperty>();
-			//
-			//modelYolla.add(item);
-			System.err.println("çalýþtým");
-			try {
-				String que = "select urunid,urunadi,urunkategori from urunler";
-				ResultSet rs = db.baglan().executeQuery(que);
-				while (rs.next()) {
-					UrunProperty urun = new UrunProperty();
-					urun.setUrunid(rs.getString("urunid"));
-					urun.setUrunadi(rs.getString("urunadi"));
-					urun.setUrunkategori(rs.getString("urunkategori"));
-					urunProp.add(urun);
-				}
-				//modelYolla.add(urunProp);
-			} catch (Exception e) {
-				System.err.println("kategori getirme hatasý:" + e.getMessage());
+		System.err.println("çalýþtým");
+		try {
+			String que = "select urunid,urunadi,urunkategori from urunler";
+			ResultSet rs = db.baglan().executeQuery(que);
+			while (rs.next()) {
+				UrunProperty urun = new UrunProperty();
+				urun.setUrunid(rs.getString("urunid"));
+				urun.setUrunadi(rs.getString("urunadi"));
+				urun.setUrunkategori(rs.getString("urunkategori"));
+				urunProp.add(urun);
 			}
 
+		} catch (Exception e) {
+			System.err.println("kategori getirme hatasý:" + e.getMessage());
+		}
 
-			model.addAttribute("kats", urunProp);
-			
-			System.out.println("urun sayisi : " + urunProp.size());
-			System.out.println("kategori sayisi " + ls.size());
-		
-		//System.out.println("modelyolla deðeri:" + modelYolla);
+		model.addAttribute("kats", urunProp);
+
+		System.out.println("urun sayisi : " + urunProp.size());
+		System.out.println("kategori sayisi " + ls.size());
+
 		return "inc/menu";
 	}
 
@@ -93,16 +104,13 @@ public class Includes {
 	public String footerCagir() {
 		return "inc/footer";
 	}
-	
-	
+
 	@RequestMapping(value = "UserMenu", method = RequestMethod.GET)
 	public String UserMenuCagir(Model model) {
-		
-		
+
 		ArrayList<KategoriProperty> ls = new ArrayList<KategoriProperty>();
 		ArrayList<String> kategori = new ArrayList<String>();
-		
-		
+
 		try {
 			String que = "select *from kategori";
 			ResultSet rs = db.baglan().executeQuery(que);
@@ -119,7 +127,25 @@ public class Includes {
 		}
 		return "inc/UserMenu";
 	}
-	
-	
 
+	@RequestMapping(value = "HeaderAdmin", method = RequestMethod.GET)
+	public String HeaderAdmin(Model model) {
+
+		String adminbilgi = null;
+		try {
+			String query = "select *from admin_panel";
+			ResultSet rs = db.baglan().executeQuery(query);
+			while (rs.next()) {
+
+				adminbilgi = rs.getString("admin_bilgi");
+			}
+
+			model.addAttribute("adminadsoyad", adminbilgi);
+
+		} catch (Exception e) {
+			System.err.println("Admin bilgilerini getirme hatasý: " + e.getMessage());
+		}
+		return "inc/HeaderAdmin";
+
+	}
 }

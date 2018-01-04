@@ -39,21 +39,7 @@ public class YonetimController {
 	@RequestMapping(value = "/yonetim", method = RequestMethod.GET)
 	public String akis(HttpServletRequest req, Model model) {
 
-		String adminbilgi = null;
-		try {
-			String query = "select *from admin_panel";
-			ResultSet rs = db.baglan().executeQuery(query);
-			while (rs.next()) {
-
-				adminbilgi = rs.getString("admin_bilgi");
-			}
-
-			model.addAttribute("adminbilgisi", adminbilgi);
-			System.err.println("admin bilgisi : " + adminbilgi);
-
-		} catch (Exception e) {
-			System.err.println("Admin bilgilerini getirme hatasý: " + e.getMessage());
-		}
+		
 
 		return denetim(req, "yonetim");
 	}

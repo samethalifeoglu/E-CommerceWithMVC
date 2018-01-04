@@ -25,16 +25,7 @@
 				<!-- Notifications: style can be found in dropdown.less -->
 
 				<!-- Tasks: style can be found in dropdown.less -->
-				<li class="dropdown tasks-menu"><a
-					href='<s:url value="/girisyap"></s:url>'> <i
-						class="fa fa-sign-in" aria-hidden="true"></i> <span>Giris
-							Yap </span>
-				</a></li>
-				<li class="dropdown tasks-menu"><a
-					href='<s:url value="/yenikayit"></s:url>'> <i
-						class="fa fa-user-plus" aria-hidden="true"></i></i><span>Kayıt
-							Ol!</span>
-				</a></li>
+				
 				<!-- User Account: style can be found in dropdown.less -->
 				<li class="dropdown user user-menu"><a href="#"
 					class="dropdown-toggle" data-toggle="dropdown"> <c:if
