@@ -12,7 +12,7 @@
 <body class="hold-transition skin-green sidebar-mini">
 
 	<div class="wrapper">
-		<jsp:include page="${request.contextPath}/header"></jsp:include>
+		<jsp:include page="${request.contextPath}/headeruser"></jsp:include>
 		<jsp:include page="${request.contextPath}/UserMenu"></jsp:include>
 
 		<div class="content-wrapper">

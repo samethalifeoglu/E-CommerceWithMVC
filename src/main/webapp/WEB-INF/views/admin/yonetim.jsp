@@ -76,7 +76,7 @@
 									<th class="tg-yw4l">Kategori Adı</th>
 
 								</tr>
-								<div class="col-md-12 text-right">
+								
 									<c:forEach var="kategorim" items="${kategorilerigetir}">
 										<form
 											action='<s:url value="/duzenlendi/${kategorim.getKategadi()}"></s:url>'>
@@ -94,7 +94,7 @@
 											</tr>
 										</form>
 									</c:forEach>
-								</div>
+								
 							</table>
 
 						</c:if>

@@ -51,24 +51,24 @@
 <body class="hold-transition login-page">
 	<div class="login-box">
 		<div class="login-logo">
-			<a href="../../index2.html"><b>WİSSEN</b>Ticaret</a>
+			<a href="../../index2.html"><b>WİSSEN</b> Ticaret</a>
 		</div>
 		<!-- /.login-logo -->
 
 
 		<c:if test="${not empty girispanel}">
 			<div class="login-box-body">
-				<p class="login-box-msg">Giriş Paneli</p>
+				<p class="login-box-msg">Admin Giriş Paneli</p>
 
 				<form method="post" action='<s:url value="/admin" ></s:url>'>
 					<div class="form-group has-feedback">
 						<input name="mail" type="email" class="form-control"
-							placeholder="Email"> <span
+							placeholder="Email" autocomplete="off"> <span
 							class="glyphicon glyphicon-envelope form-control-feedback"></span>
 					</div>
 					<div class="form-group has-feedback">
 						<input name="sifre" type="password" class="form-control"
-							placeholder="Şifre"> <span
+							placeholder="Şifre" autocomplete="off"> <span
 							class="glyphicon glyphicon-lock form-control-feedback"></span>
 					</div>
 					<div class="row">

@@ -48,69 +48,161 @@
 
 
 <body class="hold-transition register-page">
-	<div class="register-box">
-		<div class="register-logo">
-			<a href="../../index2.html"><b>Admin</b>LTE</a>
-		</div>
+	<c:if test="${not empty kayitiddegeri }">
+		<div class="register-box">
+			<div class="register-logo">
+				<a href="../../index2.html"><b>Wissen</b>LTD</a>
+			</div>
 
-		<div class="register-box-body">
-			<p class="login-box-msg">Register a new membership</p>
+			<div class="register-box-body">
+				<p class="login-box-msg">Yeni Kayıt</p>
 
-			<form action='<s:url value="/kayitkontrol"></s:url>' method="post">
-				<div class="form-group has-feedback">
-					<input type="isim" class="form-control" placeholder="Tam Adınız">
-					<span class="glyphicon glyphicon-user form-control-feedback"></span>
-				</div>
-				<div class="form-group has-feedback">
-					<input type="email" class="form-control" placeholder="Email">
-					<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-				</div>
-				<div class="form-group has-feedback">
-					<input type="sifre" class="form-control" placeholder="Şifre">
-					<span class="glyphicon glyphicon-lock form-control-feedback"></span>
-				</div>
-				<div class="form-group has-feedback">
-					<input type="tekrarsifre" class="form-control"
-						placeholder="Tekrar Şifre"> <span
-						class="glyphicon glyphicon-log-in form-control-feedback"></span>
-				</div>
-				<div class="row">
-					<div class="col-xs-8">
-						<div class="checkbox icheck">
-							<label> <input name="beni_hatirla" type="checkbox">
-								Beni Hatırla
-							</label>
+				<form
+					action='<s:url value="/kayitkontrol/${kayitiddegeri}"></s:url>'
+					method="post">
+					<div class="form-group has-feedback">
+						<input type="text" name="username" class="form-control"
+							placeholder="Kullanıcı Adınız" autocomplete="off"> <span
+							class="glyphicon glyphicon-user form-control-feedback"></span>
+					</div>
+					<div class="form-group has-feedback">
+						<input type="email" name="usermail" class="form-control"
+							placeholder="Email" autocomplete="off"> <span
+							class="glyphicon glyphicon-envelope form-control-feedback"></span>
+					</div>
+					<div class="form-group has-feedback">
+						<input type="password" name="userpass" class="form-control"
+							placeholder="Şifre" autocomplete="off"> <span
+							class="glyphicon glyphicon-lock form-control-feedback"></span>
+					</div>
+					<div class="form-group has-feedback">
+						<input type="password" class="form-control" name="userpasstekrar"
+							placeholder="Tekrar Şifre" autocomplete="off"> <span
+							class="glyphicon glyphicon-log-in form-control-feedback"></span>
+					</div>
+					<div class="row">
+						<div class="col-xs-4">
+							<button type="submit" class="btn btn-primary btn-block btn-flat">Kaydet</button>
+						</div>
+						<div class="col-md-8">
+							<c:if test="${not empty bilgilerbosgecilemez}">
+								<button type="button" class="btn btn-block btn-danger btn-sm">Şifre
+									veya kullanıcı ismi boş geçilemez</button>
+							</c:if>
+							<c:if test="${not empty sifreleruyumsuz}">
+								<button type="button" class="btn btn-block btn-danger btn-sm">Şifreler
+									eşleşmemektedir !</button>
+							</c:if>
 						</div>
 					</div>
-					<!-- /.col -->
-					<div class="col-xs-4">
-						<button type="submit" class="btn btn-primary btn-block btn-flat">Kaydet</button>
+				</form>
+			</div>
+		</div>
+	</c:if>
+
+	<!---------------------------------------------------------------------------------------------------->
+	<div class="login-box">
+		<c:if test="${not empty yenikayiteklemebasarili }">
+
+			<form action='<s:url value="/"></s:url>'>
+
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">KAYIT ONAY !</h5>
 					</div>
-					
-					<div class="col-md-12">
-					
-					<c:if test="${not empty iddegeri }">
-
-						<h4>Resim Ekle</h4>
-
-
-						<iframe
-							src='http://localhost:8090/resim/index.php?resim_id=<c:out value="${iddegeri}"></c:out>'
-							style="width: 100%; height: 300px;" frameborder="0"></iframe></c:if>
-
+					<div class="modal-body">
+						<h2>Kayıt işlemi başarılı.</h2>
 					</div>
-					<!-- /.col -->
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-primary">Tamam</button>
+					</div>
 				</div>
 			</form>
-
-
-
-			<a href="login.html" class="text-center">I already have a
-				membership</a>
-		</div>
-		<!-- /.form-box -->
+		</c:if>
 	</div>
-	<!-- /.register-box -->
+	<!---------------------------------------------------------------------------------------------------------------------------------------------->
+	<div class="login-box">
+		<c:if test="${not empty yenikayiteklemebasarisiz }">
+
+			<form action='<s:url value="/"></s:url>'>
+
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">KAYIT ONAY !</h5>
+					</div>
+					<div class="modal-body">
+						<h2>Kayıt işlemi başarısız.</h2>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-primary">Tamam</button>
+					</div>
+				</div>
+			</form>
+		</c:if>
+	</div>
+
+	<!---------------------------------------------------------------------------------------------------------------------------------------------->
+	<div class="login-box">
+		<div class="login-logo">
+			<a href="../../index2.html"><b>WİSSEN</b>Ticaret</a>
+		</div>
+		<!-- /.login-logo -->
+		<c:if test="${not empty girispanel}">
+			<div class="login-box-body">
+				<p class="login-box-msg">Müşteri Giriş Paneli</p>
+
+				<form method="post" action='<s:url value="/musteriGiris" ></s:url>'>
+					<div class="form-group has-feedback">
+						<input name="musterimail" type="email" class="form-control"
+							placeholder="Email" autocomplete="off"> <span
+							class="glyphicon glyphicon-envelope form-control-feedback"></span>
+					</div>
+					<div class="form-group has-feedback">
+						<input name="musterisifre" type="password" class="form-control"
+							placeholder="Şifre" autocomplete="off"> <span
+							class="glyphicon glyphicon-lock form-control-feedback"></span>
+					</div>
+					<div class="row">
+						<div class="col-xs-8">
+							<div class="checkbox icheck">
+								<label> <input name="beni_hatirla" type="checkbox">
+									Beni Hatırla
+								</label>
+							</div>
+						</div>
+						<!-- /.col -->
+						<div class="col-xs-8">
+							<c:if test="${not empty bossifre}">
+								<button type="button" class="btn btn-block btn-danger btn-sm">Şifre
+									veya Mail boş geçilemez</button>
+							</c:if>
+
+							<c:if test="${not empty sifremailyanlis}">
+								<button type="button" class="btn btn-block btn-danger btn-sm">Mail
+									veya şifre hatası !</button>
+							</c:if>
+
+
+						</div>
+						<div class="col-xs-4">
+							<button type="submit" class="btn btn-primary btn-block btn-flat">Giriş
+								Yap</button>
+						</div>
+						<div class="col-xs-7"></div>
+						<div class="col-xs-5">
+							<a href='<s:url value="/sifreunut"></s:url>'><h5>Şifremi
+									Unuttum</h5></a>
+						</div>
+						<!-- /.col -->
+					</div>
+				</form>
+			</div>
+		</c:if>
+	</div>
+
+
+
+
 
 	<!-- jQuery 3 -->
 
@@ -133,6 +225,4 @@
 			});
 		});
 	</script>
-
-
 </body>
