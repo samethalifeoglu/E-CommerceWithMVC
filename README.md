@@ -4,17 +4,17 @@ Bu proje yazılım dilleri olarak Java/JSP/JSF MVC ve Veritabanı olarak MYSQL t
 
 <a href="https://github.com/SametHalifeoglu/Mvceticaret/blob/master/resimler/Anasayfa.PNG" target="_blank">
 <img src="https://github.com/SametHalifeoglu/Mvceticaret/blob/master/resimler/Anasayfa.PNG" width="200" style="max-width:100%;"></a>
-<hr>
+
 <a href="https://github.com/SametHalifeoglu/Mvceticaret/blob/master/resimler/Kategoriler.PNG" target="_blank">
 <img src="https://github.com/SametHalifeoglu/Mvceticaret/blob/master/resimler/Kategoriler.PNG" width="200" style="max-width:100%;"></a>
-<hr>
+
 <a href="https://github.com/SametHalifeoglu/Mvceticaret/blob/master/resimler/urunler.PNG" target="_blank">
 <img src="https://github.com/SametHalifeoglu/Mvceticaret/blob/master/resimler/urunler.PNG" width="200" style="max-width:100%;"></a>
-<hr>
+
 <a href="https://github.com/SametHalifeoglu/Mvceticaret/blob/master/resimler/admingiris.PNG" target="_blank">
 <img src="https://github.com/SametHalifeoglu/Mvceticaret/blob/master/resimler/admingiris.PNG" width="200" style="max-width:100%;"></a>
 
-<hr>
+
 <a href="https://github.com/SametHalifeoglu/Mvceticaret/blob/master/resimler/addminkategori.PNG" target="_blank">
 <img src="https://github.com/SametHalifeoglu/Mvceticaret/blob/master/resimler/addminkategori.PNG" width="200" style="max-width:100%;"></a>
 
