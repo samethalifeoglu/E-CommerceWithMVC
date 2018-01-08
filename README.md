@@ -24,3 +24,6 @@ Bu proje yazılım dilleri olarak Java/JSP/MVC ve Veritabanı olarak MYSQL tekno
 <a href="https://github.com/SametHalifeoglu/Mvceticaret/blob/master/resimler/uruneklesil.PNG" target="_blank">
 <img src="https://github.com/SametHalifeoglu/Mvceticaret/blob/master/resimler/uruneklesil.PNG" width="200" style="max-width:100%;"></a>
 
+<a href="https://github.com/SametHalifeoglu/Mvceticaret/blob/master/resimler/odemesayfasi.PNG" target="_blank">
+<img src="https://github.com/SametHalifeoglu/Mvceticaret/blob/master/resimler/odemesayfasi.PNG" width="200" style="max-width:100%;"></a>
+
