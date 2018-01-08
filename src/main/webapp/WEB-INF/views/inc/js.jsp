@@ -16,6 +16,7 @@
 <script src='<s:url value="/resources/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></s:url>'></script>
 <!-- jvectormap  -->
 <script src='<s:url value="/resources/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></s:url>'></script>
+
 <script src='<s:url value="/resources/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></s:url>'></script>
 <!-- SlimScroll -->
 <script src='<s:url value="/resources/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></s:url>'></script>
@@ -26,5 +27,8 @@
 <!-- AdminLTE for demo purposes -->
 <script src='<s:url value="/resources/dist/js/demo.js"></s:url>'></script>
 
+<script src='<s:url value="/resources/dist/js/easyResponsiveTabs.js"></s:url>'></script>
+
 <script src='<s:url value="/resources/ckeditor/ckeditor.js"></s:url>'></script>
+
 <script src='<s:url value="/resources/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></s:url>'></script>
